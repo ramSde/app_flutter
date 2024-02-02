@@ -1,5 +1,6 @@
 
 
+import 'package:bmi_calc/screens/usercredentils.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,9 +17,9 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Future.delayed(
-    Duration(seconds: 8),
+    Duration(seconds: 4),
     (){
-      Navigator.pushReplacementNamed(context, '/user');
+      Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>UserScreen()));
     }
 
     );
@@ -31,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
         width: MediaQuery.of(context).size.width,
          decoration: BoxDecoration(
         // Box decoration takes a gradient
-        color: Colors.grey[200]
+        color: Colors.white
       ),
       
         child: Container(
@@ -39,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
           width: 140,
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            image: DecorationImage(image: AssetImage("/assets/images/bmi.png"))),
+            image: DecorationImage(image: AssetImage('assets/images/bmi.png'))),
         ),
       ),
     );
